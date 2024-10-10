@@ -17,19 +17,16 @@ int main() {
         printf("Enter your vote as letter a, b, or c: ");
         scanf(" %c", &vote); // space before %c to ignore any whitespace
         
-        switch (vote) {
-            case 'a':
-                votes[0]++;
-                break;
-            case 'b':
-                votes[1]++;
-                break;
-            case 'c':
-                votes[2]++;
-                break;
-            default:
-                printf("Invalid vote. Please enter a, b, or c.\n");
-                continue; // Skip the rest of the loop
+        // Handle vote using if statements
+        if (vote == 'a') {
+            votes[0]++;
+        } else if (vote == 'b') {
+            votes[1]++;
+        } else if (vote == 'c') {
+            votes[2]++;
+        } else {
+            printf("Invalid vote. Please enter a, b, or c.\n");
+            continue; // Skip the rest of the loop
         }
         
         total_votes++;
@@ -52,3 +49,4 @@ int main() {
 
     return 0;
 }
+
